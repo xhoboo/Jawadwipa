@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<title>Jawadwipa</title>
+</head>
+
+<body>
+	<h1 style="text-align: center;">Jawadwipa Game Test</h1>
+	<hr>
+
+	<p id="timeid" class="timeclass"></p>
+
+	<div class="border">
+	<p>Stok Beras yg tersedia adalah : <span id="berasid" class="berasclass">0</span></p>
+	<p>Produksi beras : <span id="berasnow">1</span> per detik</p>
+	<button onclick="setberas(1)">tambah produksi beras +1 per detik</button>
+	<p>Membutuhkan <span id="biayaberasid">10</span> Beras untuk menambah produksi</p>
+	</div>
+
+	<button id="hilang" onclick="dissapear()">Membutuhkan 1000 Beras untuk mendapatkan Kayu</button>
+	<div class="borderx" id="muncul">
+	<p>Stok Kayu yg tersedia adalah : <span id="kayuid" class="kayuclass">0</span></p>
+	<p>Produksi Kayu : <span id="kayunow">0</span> per detik</p>
+	<button onclick="setkayu(1)">tambah produksi kayu +1 per detik</button>
+	<p>Membutuhkan <span id="biayakayuid">10</span> Kayu untuk menambah produksi</p>
+	</div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

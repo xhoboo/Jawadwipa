@@ -1,0 +1,33 @@
+.timeclass
+{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: max-content;
+    position: absolute;
+    padding: 2px;
+    margin: 2px;
+    right: 10px;
+}
+
+.border
+{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 380px;
+    height: 160px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.borderx
+{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 380px;
+    height: 160px;
+    padding: 10px;
+    margin: 10px;
+    display: none;
+    overflow: hidden;
+}
+
