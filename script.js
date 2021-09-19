@@ -21,13 +21,13 @@ function setberas(beras) {
 	}
 }
 
-function dissapear() {
+function dissapearkayu() {
 	var current = parseInt(document.getElementById("berasid").innerHTML);
 	var currentkayu = parseInt(document.getElementById("kayunow").innerHTML);
 	if (current >= 1000){
 		document.getElementById("berasid").innerHTML = current - 1000;
-		document.getElementById("muncul").style.display = "block";
-		document.getElementById("hilang").style.display = "none";
+		document.getElementById("munculkayu").style.display = "block";
+		document.getElementById("hilangkayu").style.display = "none";
 		document.getElementById("kayunow").innerHTML = currentkayu + 1;
 	}
 }
@@ -46,5 +46,33 @@ function setkayu(kayu) {
 		document.getElementById("kayuid").innerHTML = current - biayakayu;
 		document.getElementById("kayunow").innerHTML = parseInt(document.getElementById("kayunow").innerHTML) + kayu;
 		document.getElementById("biayakayuid").innerHTML = biayakayu * 2;
+	}
+}
+
+function dissapearbesi() {
+	var current = parseInt(document.getElementById("kayuid").innerHTML);
+	var currentbesi = parseInt(document.getElementById("besinow").innerHTML);
+	if (current >= 1000){
+		document.getElementById("kayuid").innerHTML = current - 1000;
+		document.getElementById("munculbesi").style.display = "block";
+		document.getElementById("hilangbesi").style.display = "none";
+		document.getElementById("besinow").innerHTML = currentbesi + 1;
+	}
+}
+
+setInterval(besiTimer, 1000);
+function besiTimer() {
+	var countbesi = parseInt(document.getElementById("besiid").innerHTML);
+	var countbesix = parseInt(document.getElementById("besinow").innerHTML);
+	var current = countbesi + countbesix;
+	document.getElementById("besiid").innerHTML = current;
+}
+function setbesi(besi) {
+	var current = parseInt(document.getElementById("besiid").innerHTML);
+	var biayabesi = parseInt(document.getElementById("biayabesiid").innerHTML);
+	if (current >= biayabesi) {
+		document.getElementById("besiid").innerHTML = current - biayabesi;
+		document.getElementById("besinow").innerHTML = parseInt(document.getElementById("besinow").innerHTML) + besi;
+		document.getElementById("biayabesiid").innerHTML = biayabesi * 2;
 	}
 }

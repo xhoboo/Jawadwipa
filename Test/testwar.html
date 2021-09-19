@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+    <title>War Test</title>
+</head>
+
+<body>
+    <div class="border saya">
+        <h3 id="desa1" style="text-align: center;">Desa Saya</h3>
+        <p>Jumlah prajurit 1 : <input type="text" class="p1"></p>
+        <p>Jumlah prajurit 2 : <input type="text" class="p2"></p>
+    </div>
+
+    <div class="border m1">
+        <h3 style="text-align: center;">Desa Musuh 1</h3>
+        <p>Jumlah prajurit 1 : <span class="p1">0</p>
+        <p>Jumlah prajurit 2 : <span class="p2">0</p>
+        <button onclick="serang('m1')">Serang Desa Ini!</button>
+    </div>
+    <div class="border">
+        <p>sisa prajurit : <span id="sisam1"></span></p>
+    </div>
+
+    <div class="border m2">
+        <h3 style="text-align: center;">Desa Musuh 2</h3>
+        <p>Jumlah prajurit 1 : <span class="p1">0</p>
+        <p>Jumlah prajurit 2 : <span class="p2">0</p>
+        <button onclick="serang('m2')">Serang Desa Ini!</button>
+    </div>
+    <div class="border">
+        <p>sisa prajurit : <span id="sisam2"></span></p>
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
