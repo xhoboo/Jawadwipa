@@ -17,15 +17,21 @@ function serang(musuh) {
     var sp1 = document.querySelector('.saya .p1').value;
     var sp2 = document.querySelector('.saya .p2').value;
     var totalatts = 0;
-    var prajurit = new Array ();
+    var prajurit = {
+        "sp1": 0,
+        "sp2": 0
+    }
+    var countprajurit = 0;
 
     if (sp1 != 0) {
-        prajurit["sp1"] = sp1
+        prajurit.sp1 = 1
+        countprajurit++
     }
     if (sp2 != 0) {
-        prajurit["sp2"] = sp2
+        prajurit.sp2 = 1
+        countprajurit++
     }
-    console.log(prajurit.splice(0,1))
+    console.log(prajurit)
 
     if (musuh == "m1") {
         totalatts = ((sp1 * attsp1) + (sp2 * attsp2)) - ((m1p1 * defm1p1) + (m1p2 * defm1p2));
@@ -34,8 +40,8 @@ function serang(musuh) {
         totalatts = ((sp1 * attsp1) + (sp2 * attsp2)) - ((m2p1 * defm2p1) + (m2p2 * defm2p2));
     }
 
-    var sisasp1 = ((totalatts / 2) / attsp1);
-    var sisasp2 = ((totalatts / 2) / attsp2);
+    var sisasp1 = ((totalatts / countprajurit) / attsp1) * prajurit["sp1"];
+    var sisasp2 = ((totalatts / countprajurit) / attsp2) * prajurit["sp2"];
     var sisamp1 = 0;
     var sisamp2 = 0;
 
