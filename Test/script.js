@@ -14,8 +14,8 @@ const defm2p1 = 25;
 const defm2p2 = 75;
 
 function serang(musuh) {
-    var sp1 = document.querySelector('.saya .p1').value;
-    var sp2 = document.querySelector('.saya .p2').value;
+    var sp1 = parseInt(document.querySelector('.saya .p1').value);
+    var sp2 = parseInt(document.querySelector('.saya .p2').value);
     var totalatts = 0;
     var prajurit = {
         "sp1": 0,
@@ -46,7 +46,13 @@ function serang(musuh) {
     var sisamp2 = 0;
 
     if (sp1 <= sisasp1) {
+        sisasp2 = sisasp2 + (((sisasp1 - sp1) * attsp1) / attsp2);
         sisasp1 = sp1;
+        sisamp1 = 0;
+        sisamp2 = 0;
+    }
+    else if (sp2 <= sisasp2) {
+        sisasp1 = sisasp1 + (((sisasp2 - sp2) * attsp2) / attsp1);
         sisasp2 = sp2;
         sisamp1 = 0;
         sisamp2 = 0;
@@ -54,6 +60,8 @@ function serang(musuh) {
     else if (sisasp1 <= 0) {
         sisasp1 = 0;
         sisasp2 = 0;
+        sisamp1 = 0;
+        sisamp2 = 0;
     }
 
     document.getElementById("sisa" + musuh).innerHTML = "<br>Prajurit 1 Saya = " + Math.round(sisasp1) + "<br>Prajurit 2 Saya = " + Math.round(sisasp2) + "<br>Prajurit 1 Musuh = " + Math.round(sisamp1) + "<br>Prajurit 2 Musuh = " + Math.round(sisamp2);
